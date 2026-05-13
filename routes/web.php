@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 
@@ -50,3 +49,6 @@ Route::post('/contact-send', [ContactController::class, 'send'])
 Route::get('/solusi-umkm', function () {
     return view('pages.solusi-umkm');
 });    
+Route::get('/katalog', function () {
+    return view('pages.katalog');
+});

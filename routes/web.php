@@ -52,3 +52,7 @@ Route::get('/solusi-umkm', function () {
 Route::get('/katalog', function () {
     return view('pages.katalog');
 });
+
+Route::get('/produk', function () {
+    return view('pages.produk');
+});

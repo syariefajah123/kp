@@ -25,9 +25,8 @@
 
 </section>
 
-<!-- KATEGORI INDUSTRI -->
 
-```html
+
 <!-- KATEGORI INDUSTRI -->
 
 <section class="industry-section">
@@ -241,6 +240,31 @@
             </div>
         </div>
 
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <div class="cta-box">
+        <h2>Siap Memulai Kemitraan dengan Kami?</h2>
+
+        <p>
+            Hubungi kami sekarang untuk konsultasi gratis dan penawaran terbaik.
+        </p>
+
+        <div class="cta-buttons">
+
+            <!-- BUTTON HUBUNGI -->
+            <a href="{{ url('/hubungi-kami') }}" class="btn-primary">
+                Hubungi Kami →
+            </a>
+
+            <!-- BUTTON PRODUK -->
+            <a href="{{ url('/katalog') }}" class="btn-secondary">
+                Lihat Produk
+            </a>
+
+        </div>
     </div>
 </section>
 

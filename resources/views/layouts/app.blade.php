@@ -5,7 +5,9 @@
 
     <meta charset="UTF-8">
 
-    <title>PT Luck Packaging Indonesia</title>
+    <title> PT Luck Packaging Indonesia</title>
+    
+     <link rel="icon" href="{{ asset('images/logo.png') }}" type="image/png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -78,7 +80,7 @@
             </li>
 
             <!-- DROPDOWN -->
-            <li class="dropdown">
+            <li class="dropdown" id="SolusiDropdown">
 
                 <a href="#">
                     Solusi
@@ -103,9 +105,30 @@
 
             </li>
 
-            <li>
-                <a href="/products">Produk</a>
-            </li>
+    <li class="dropdown" id="produkDropdown">
+
+    <a href="#" id="produkToggle">
+        Produk
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li>
+            <a href="/katalog">
+                Katalog Produk
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                Packaging Industri
+            </a>
+        </li>
+
+    </ul>
+
+</li>
 
             <li>
                 <a href="/about">Tentang Kami</a>
@@ -265,7 +288,10 @@ AOS.init({
 <!-- SCRIPT -->
 <!-- ================================= -->
 
+
 <script>
+
+
 
 // =================================
 // MOBILE MENU
@@ -411,6 +437,23 @@ document.addEventListener('mousemove', (e) => {
 
 });
 
+// PRODUK DROPDOWN CLICK
+
+const produkToggle = document.getElementById('produkToggle');
+
+const produkDropdown = document.getElementById('produkDropdown');
+
+if(produkToggle && produkDropdown){
+
+    produkToggle.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        produkDropdown.classList.toggle('active');
+
+    });
+
+}
 </script>
 
 </body>

@@ -73,12 +73,23 @@ body {
 
     background:transparent;
 
-    mix-blend-mode:screen;
+    mix-blend-mode:normal;
 }
 
 .logo img:hover{
 
     transform:scale(1.05);
+}
+
+/* DROPDOWN ACTIVE */
+
+.dropdown.active .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
 }
 
 .nav-links{
@@ -89,10 +100,25 @@ body {
 }
 
 .nav-links a{
-    color:white;
+     display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#ffffff;
+
     text-decoration:none;
+
     font-size:16px;
+
     transition:0.3s;
+}
+.nav-links a i{
+
+    font-size:14px;
+
+    margin-top:2px;
 }
 
 .nav-links a:hover{
@@ -1256,12 +1282,12 @@ body {
 /* NAVBAR HOVER */
 /* ================================= */
 
-.nav-links a{
+.nav-links > li > a{
 
     position:relative;
 }
 
-.nav-links a::after{
+.nav-links > li > a::after{
 
     content:'';
 
@@ -1657,23 +1683,20 @@ body {
     box-shadow:0 5px 25px rgba(0,0,0,0.08);
 
     border-bottom:1px solid #e5e7eb;
-
-    .navbar.scrolled .logo{
-
-    color:#0A1F44;
 }
 
-    .navbar.scrolled .nav-links a{
+/* TEXT MENU */
 
-    color:#0A1F44;
+.navbar.scrolled .nav-links a{
+
+    color:#0A1F44 !important;
 }
 
-    .navbar.scrolled .nav-links a:hover{
+/* HOVER */
 
-    color:#5fa8c7;
-}
+.navbar.scrolled .nav-links a:hover{
 
-    
+    color:#5fa8c7 !important;
 }
 
 /* NAVBAR HOVER LIGHT */
@@ -1700,6 +1723,7 @@ body {
     opacity:0;
 
     transition:.5s;
+     pointer-events:none;
 }
 
 .navbar:hover::before{
@@ -3137,19 +3161,19 @@ section{
 
 .dropdown-menu{
 
-    position:absolute;
+   position:absolute;
 
     top:120%;
 
     left:0;
 
-    min-width:220px;
+    min-width:240px;
 
     background:white;
 
-    border-radius:16px;
+    border-radius:18px;
 
-    padding:12px 0;
+    padding:10px;
 
     list-style:none;
 
@@ -3171,9 +3195,11 @@ section{
 
 .dropdown-menu a{
 
-    display:block;
+   display:block;
 
-    padding:14px 22px;
+    padding:14px 18px;
+
+    border-radius:12px;
 
     color:#0A1F44 !important;
 
@@ -3188,12 +3214,12 @@ section{
 
     background:#f1f5f9;
 
-    padding-left:28px;
+    transform:translateX(4px);
 }
 
 /* SHOW DROPDOWN */
 
-.dropdown:hover .dropdown-menu{
+.dropdown.active .dropdown-menu{
 
     opacity:1;
 

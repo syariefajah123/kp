@@ -70,6 +70,59 @@
 
         </div>
 
+        <!-- CARD 3 -->
+<div class="industry-card">
+
+    <div class="industry-icon">
+        <i class="fa-solid fa-box"></i>
+    </div>
+
+    <h3>Kardus Packaging & Corrugated Box</h3>
+
+    <p>
+        Kardus pengiriman standar logistik (E-Flute/B-Flute)
+        yang kokoh untuk melindungi produk selama ekspedisi.
+    </p>
+
+    <div class="industry-tags">
+
+        <span>Custom Box</span>
+        <span>Branded Packaging</span>
+        <span>Special Design</span>
+        <span>Corrugated Box</span>
+        <span>Display Box</span>
+
+    </div>
+
+</div>
+
+<!-- CARD 4 -->
+<div class="industry-card">
+
+    <div class="industry-icon">
+        <i class="fa-solid fa-gift"></i>
+    </div>
+
+    <h3>Hardbox & Custom Packaging</h3>
+
+    <p>
+        Kemasan eksklusif (Rigid Box) dengan finishing
+        foil/emboss untuk produk kosmetik, hampers,
+        dan gift set.
+    </p>
+
+    <div class="industry-tags">
+
+        <span>Gift Box</span>
+        <span>Hampers Box</span>
+        <span>Premium Container</span>
+        <span>Luxury Packaging</span>
+        <span>Ribbon Box</span>
+
+    </div>
+
+</div>
+
     </div>
 
 </section>

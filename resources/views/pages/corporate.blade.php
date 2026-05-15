@@ -156,17 +156,29 @@
 
 </section>
 
-<!-- CTA -->
-<section class="cta">
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <div class="cta-box">
+        <h2>Siap Memulai Kemitraan dengan Kami?</h2>
 
-    <h2>Siap Memulai Kerjasama?</h2>
+        <p>
+            Hubungi kami sekarang untuk konsultasi gratis dan penawaran terbaik.
+        </p>
 
-    <br>
+        <div class="cta-buttons">
 
-  <a href="/hubungi-kami" class="btn-primary">
-    Hubungi Kami
-</a>
+            <!-- BUTTON HUBUNGI -->
+            <a href="{{ url('/hubungi-kami') }}" class="btn-primary">
+                Hubungi Kami →
+            </a>
 
+            <!-- BUTTON PRODUK -->
+            <a href="{{ url('/katalog') }}" class="btn-secondary">
+                Lihat Produk
+            </a>
+
+        </div>
+    </div>
 </section>
 
 @endsection

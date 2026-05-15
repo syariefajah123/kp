@@ -82,7 +82,7 @@
             <!-- DROPDOWN -->
             <li class="dropdown" id="SolusiDropdown">
 
-                <a href="#">
+                <a href="#" id="solusiToggle">
                     Solusi
                     <i class="fa-solid fa-chevron-down"></i>
                 </a>
@@ -121,7 +121,7 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="/packaging">
                 Packaging Industri
             </a>
         </li>
@@ -437,23 +437,70 @@ document.addEventListener('mousemove', (e) => {
 
 });
 
-// PRODUK DROPDOWN CLICK
-
+// DROPDOWN PRODUK
 const produkToggle = document.getElementById('produkToggle');
-
 const produkDropdown = document.getElementById('produkDropdown');
+
+// DROPDOWN SOLUSI
+const solusiToggle = document.getElementById('solusiToggle');
+const solusiDropdown = document.getElementById('SolusiDropdown');
+
+
+// ==========================
+// PRODUK
+// ==========================
 
 if(produkToggle && produkDropdown){
 
     produkToggle.addEventListener('click', (e) => {
 
         e.preventDefault();
+        e.stopPropagation();
 
+        // tutup solusi
+        solusiDropdown?.classList.remove('active');
+
+        // toggle produk
         produkDropdown.classList.toggle('active');
 
     });
 
 }
+
+
+// ==========================
+// SOLUSI
+// ==========================
+
+if(solusiToggle && solusiDropdown){
+
+    solusiToggle.addEventListener('click', (e) => {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        // tutup produk
+        produkDropdown?.classList.remove('active');
+
+        // toggle solusi
+        solusiDropdown.classList.toggle('active');
+
+    });
+
+}
+
+
+// ==========================
+// KLIK LUAR = TUTUP SEMUA
+// ==========================
+
+document.addEventListener('click', () => {
+
+    produkDropdown?.classList.remove('active');
+
+    solusiDropdown?.classList.remove('active');
+
+});
 </script>
 
 </body>

@@ -24,6 +24,11 @@ Route::get('/products', function () {
     return view('pages.produk');
 });
 
+Route::get('/packaging', function () {
+    return view('pages.packaging');
+});
+
+
 Route::get('/services', function () {
     return view('pages.services');
 });

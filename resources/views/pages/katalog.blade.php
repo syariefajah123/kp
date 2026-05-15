@@ -155,7 +155,9 @@
 
     <!-- FILTER -->
     <div class="filter">
-        <button onclick="filterProduk('all')">Semua</button>
+        <button class="active" onclick="filterProduk('all')">
+    Semua
+</button>
         <button onclick="filterProduk('cup')">Paper Cup</button>
         <button onclick="filterProduk('bag')">Paper Bag</button>
         <button onclick="filterProduk('container')">Container</button>
@@ -298,6 +300,28 @@ function filterProduk(kategori) {
     });
 
 }
+
+<script>
+
+const buttons = document.querySelectorAll('.filter button');
+
+buttons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        buttons.forEach(btn => {
+
+            btn.classList.remove('active');
+
+        });
+
+        button.classList.add('active');
+
+    });
+
+});
+
+</script>
 
 </script>
 

@@ -61,3 +61,8 @@ Route::get('/katalog', function () {
 Route::get('/produk', function () {
     return view('pages.produk');
 });
+
+Route::get('/tentang-kami', function () {
+    return view('pages.tentang-kami');
+});
+

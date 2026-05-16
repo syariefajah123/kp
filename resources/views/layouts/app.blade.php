@@ -131,14 +131,27 @@
 </li>
 
             <li>
-                <a href="/about">Tentang Kami</a>
+                <a href="/tentang-kami"
+class="{{ Request::is('tentang-kami') ? 'active-nav' : '' }}">
+    Tentang Kami
+</a>
             </li>
 
-            <li>
-                <a href="/hubungi-kami">Hubungi Kami</a>
-            </li>
+    
 
         </ul>
+
+        <!-- RIGHT MENU -->
+<div class="nav-right">
+
+
+    <a href="/hubungi-kami" class="contact-btn">
+        Hubungi Kami
+    </a>
+
+</div>
+
+
 
     </div>
 

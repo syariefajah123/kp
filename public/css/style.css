@@ -51,7 +51,7 @@ body {
 
 .logo img{
 
-    height:80px;
+    height:70px;
 
     transition:.3s ease;
 
@@ -4760,29 +4760,47 @@ MOBILE MENU STYLE BUNGKUSIN
 .mobile-menu{
     position:fixed;
     top:0;
-    right:-100%;
+    left:0;
     width:100%;
-    height:100vh;
+    height:78vh;
     background:#fff;
     z-index:99999;
-    transition:.35s ease;
-    display:flex;
-    flex-direction:column;
+
+    border-bottom-left-radius:24px;
+    border-bottom-right-radius:24px;
+
+    transform:translateY(-120%);
+    transition:.45s ease;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.12);
 }
 
 .mobile-menu.active{
-    right:0;
+    transform:translateY(0);
 }
 
 /* HEADER */
 
 .mobile-top{
     height:88px;
-    padding:0 18px;
-    background:linear-gradient(to right,#21395b,#0d2445);
+    padding:0 20px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
+    background:linear-gradient(
+        90deg,
+        #17345f,
+        #0e2648
+    );
+
+    position:sticky;
+    top:0;
+    z-index:10;
 }
 
 .mobile-top img{
@@ -4801,12 +4819,22 @@ MOBILE MENU STYLE BUNGKUSIN
 
 .mobile-links{
     list-style:none;
-    padding:22px 20px 0;
+    padding:24px 22px 10px;
     margin:0;
 }
 
 .mobile-links li{
     margin-bottom:18px;
+}
+
+.mobile-links li a{
+    display:block;
+    font-size:16px;
+    font-weight:500;
+    color:#17345f;
+    text-decoration:none;
+
+    padding:14px 0;
 }
 
 /* MENU UTAMA */
@@ -4832,33 +4860,38 @@ MOBILE MENU STYLE BUNGKUSIN
 /* TITLE */
 
 .mobile-title{
-    color:#16345c;
     font-size:16px;
-    font-weight:500;
-    margin-top:10px;
-    margin-bottom:2px;
+    font-weight:600;
+    color:#17345f;
+
+    margin-top:22px;
+    margin-bottom:8px;
 }
 
 /* SUBMENU */
 
 .sub-link{
-    display:block;
-    padding-left:20px;
-    color:#16345c !important;
+    padding-left:18px !important;
     font-size:15px !important;
-    font-weight:400 !important;
-    line-height:1.5;
+    color:#3c4b64 !important;
 }
 
 /* BOTTOM */
 
 .mobile-bottom{
-    margin-top:auto;
-    border-top:1px solid #e8e8e8;
-    padding:20px;
+    padding:22px;
+    margin-top:10px;
+
+    border-top:1px solid #ececec;
+
     display:flex;
     align-items:center;
-    gap:16px;
+    gap:14px;
+
+    position:sticky;
+    bottom:0;
+
+    background:#fff;
 }
 
 /* LANGUAGE */
@@ -4980,4 +5013,161 @@ RESPONSIVE NAVBAR
         display:none !important;
     }
 
+}
+
+
+/* MOBILE NAVBAR */
+
+@media(max-width:991px){
+
+    .navbar{
+        background:transparent;
+        transition:.35s ease;
+    }
+
+    .navbar.scrolled{
+        background:rgba(255,255,255,.96);
+        backdrop-filter:blur(14px);
+        box-shadow:0 4px 18px rgba(0,0,0,.06);
+    }
+
+    .navbar.scrolled .menu-toggle i{
+        color:#17345f;
+    }
+
+    .menu-toggle i{
+        color:#fff;
+        transition:.3s;
+    }
+
+}
+
+/* ============================= */
+/* MOBILE MENU - BUNGKUSIN STYLE */
+/* ============================= */
+
+.mobile-menu{
+    background:#ffffff;
+    border-bottom-left-radius:24px;
+    border-bottom-right-radius:24px;
+}
+
+/* HEADER */
+
+.mobile-top{
+    height:88px;
+    padding:0 22px;
+    background:#14345d;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.mobile-top img{
+    height:34px;
+    object-fit:contain;
+}
+
+/* CLOSE */
+
+.close-menu i{
+    color:white;
+    font-size:18px;
+    font-weight:500;
+}
+
+/* LINKS */
+
+.mobile-links{
+    padding:22px 24px 0;
+}
+
+/* MENU UTAMA */
+
+.mobile-links li a{
+    font-size:15px;
+    font-weight:500;
+    color:#16345d;
+    text-decoration:none;
+    display:block;
+    padding:10px 0;
+    font-family:'Poppins', sans-serif;
+    letter-spacing:-0.2px;
+}
+
+/* ACTIVE MENU */
+
+.mobile-links li:first-child a{
+    background:#eef3f5;
+    border-radius:14px;
+    padding:14px 16px;
+    color:#4a91bb;
+}
+
+/* TITLE */
+
+.mobile-title{
+    font-size:15px;
+    font-weight:500;
+    color:#16345d;
+    margin-top:18px;
+    margin-bottom:4px;
+    font-family:'Poppins', sans-serif;
+}
+
+/* SUB MENU */
+
+.sub-link{
+    font-size:14px !important;
+    font-weight:400 !important;
+    color:#17345f !important;
+    padding:8px 0 8px 18px !important;
+    opacity:.95;
+}
+
+/* BOTTOM */
+
+.mobile-bottom{
+    margin-top:18px;
+    padding:18px 24px 22px;
+    border-top:1px solid #ececec;
+    gap:14px;
+}
+
+/* LANGUAGE */
+
+.mobile-lang{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+    color:#17345f;
+    font-weight:500;
+}
+
+.mobile-lang i{
+    font-size:17px;
+}
+
+/* BUTTON */
+
+.mobile-contact{
+    flex:1;
+    height:54px;
+    background:#1d3f6e;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    font-family:'Poppins', sans-serif;
+}
+
+/* SPACING */
+
+.mobile-links li{
+    list-style:none;
 }

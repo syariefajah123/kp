@@ -407,6 +407,7 @@ if(menuToggle && mobileMenu){
     menuToggle.addEventListener('click', () => {
 
         mobileMenu.classList.add('active');
+        
 
     });
 
@@ -417,6 +418,7 @@ if(closeMenu && mobileMenu){
     closeMenu.addEventListener('click', () => {
 
         mobileMenu.classList.remove('active');
+        
 
     });
 

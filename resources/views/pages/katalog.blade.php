@@ -23,25 +23,45 @@
             hingga kebutuhan custom branding.
         </p>
 
+    </div>
+
 </section>
 
-
-
-
+<!-- SECTION KATALOG -->
 
 <section class="catalog-section">
 
     <!-- FILTER -->
     <div class="filter">
+
         <button class="active" onclick="filterProduk('all')">
-    Semua
-</button>
-        <button onclick="filterProduk('cup')">Paper Cup</button>
-        <button onclick="filterProduk('bag')">Paper Bag</button>
-        <button onclick="filterProduk('container')">Container</button>
-        <button onclick="filterProduk('bowl')">Paper Bowl</button>
-        <button onclick="filterProduk('custom')">Custom</button>
-        <button onclick="filterProduk('accessories')">Accessories</button>
+            Semua
+        </button>
+
+        <button onclick="filterProduk('cup')">
+            Paper Cup
+        </button>
+
+        <button onclick="filterProduk('bag')">
+            Paper Bag
+        </button>
+
+        <button onclick="filterProduk('container')">
+            Container
+        </button>
+
+        <button onclick="filterProduk('bowl')">
+            Paper Bowl
+        </button>
+
+        <button onclick="filterProduk('custom')">
+            Custom
+        </button>
+
+        <button onclick="filterProduk('accessories')">
+            Accessories
+        </button>
+
     </div>
 
     <!-- GRID -->
@@ -49,78 +69,132 @@
 
         <!-- CARD -->
         <div class="card cup">
-            <img src="/images/cup.jpeg">
+
+            <img src="/images/cup.jpeg" alt="Paper Cup">
+
             <h3>Gelas Plastik atau Gelas Kertas</h3>
-            <p>Gelas kertas berkualitas tinggi untuk minuman panas dan dingin.</p>
+
+            <p>
+                Gelas kertas berkualitas tinggi untuk minuman panas dan dingin.
+            </p>
 
             <div class="tags">
+
                 <span>Panas & Dingin</span>
                 <span>Food Grade</span>
                 <span>Custom</span>
+
             </div>
+
         </div>
 
+        <!-- CARD -->
         <div class="card bag">
-            <img src="/images/bag.jpg">
+
+            <img src="/images/bag.jpg" alt="Paper Bag">
+
             <h3>Paper Bag</h3>
-            <p>Tas kertas ramah lingkungan untuk retail dan takeaway.</p>
+
+            <p>
+                Tas kertas ramah lingkungan untuk retail dan takeaway.
+            </p>
 
             <div class="tags">
+
                 <span>Eco Friendly</span>
                 <span>Kuat</span>
                 <span>Custom Logo</span>
+
             </div>
+
         </div>
 
+        <!-- CARD -->
         <div class="card container">
-            <img src="/images/container.jpg">
+
+            <img src="/images/container.jpg" alt="Food Container">
+
             <h3>Food Container</h3>
-            <p>Wadah makanan anti bocor untuk berbagai kebutuhan.</p>
+
+            <p>
+                Wadah makanan anti bocor untuk berbagai kebutuhan.
+            </p>
 
             <div class="tags">
+
                 <span>Anti Bocor</span>
                 <span>Food Grade</span>
                 <span>Stackable</span>
+
             </div>
+
         </div>
 
+        <!-- CARD -->
         <div class="card bowl">
-            <img src="/images/bowl.jpg">
+
+            <img src="/images/bowl.jpg" alt="Paper Bowl">
+
             <h3>Paper Bowl</h3>
-            <p>Mangkuk tahan panas untuk sup dan mie.</p>
+
+            <p>
+                Mangkuk tahan panas untuk sup dan mie.
+            </p>
 
             <div class="tags">
+
                 <span>Tahan Panas</span>
                 <span>Dengan Tutup</span>
                 <span>Eco</span>
+
             </div>
+
         </div>
 
+        <!-- CARD -->
         <div class="card custom">
-            <img src="/images/custom.jpg">
+
+            <img src="/images/custom.jpg" alt="Custom Packaging">
+
             <h3>Custom Packaging</h3>
-            <p>Solusi kemasan full custom sesuai brand Anda.</p>
+
+            <p>
+                Solusi kemasan full custom sesuai brand Anda.
+            </p>
 
             <div class="tags">
+
                 <span>Premium</span>
                 <span>Design Service</span>
                 <span>Branding</span>
+
             </div>
+
         </div>
 
+        <!-- CARD -->
         <div class="card accessories">
-            <img src="/images/Sleeve & Holder.jpg">
+
+            <img src="/images/Sleeve & Holder.jpg" alt="Sleeve Holder">
+
             <h3>Sleeve & Holder</h3>
-            <p>Sleeve & holder untuk minuman panas.</p>
+
+            <p>
+                Sleeve & holder untuk minuman panas.
+            </p>
 
             <div class="tags">
+
                 <span>Insulated</span>
                 <span>Eco</span>
                 <span>Custom</span>
+
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 <!-- KATEGORI INDUSTRI -->
@@ -139,8 +213,7 @@
 
     <div class="industry-grid">
 
-        <!-- CARD 1 -->
-
+        <!-- CARD -->
         <div class="industry-card">
 
             <div class="industry-icon">
@@ -166,8 +239,7 @@
 
         </div>
 
-        <!-- CARD 2 -->
-
+        <!-- CARD -->
         <div class="industry-card">
 
             <div class="industry-icon">
@@ -192,8 +264,7 @@
 
         </div>
 
-        <!-- CARD 3 -->
-
+        <!-- CARD -->
         <div class="industry-card">
 
             <div class="industry-icon">
@@ -217,8 +288,7 @@
 
         </div>
 
-        <!-- CARD 4 -->
-
+        <!-- CARD -->
         <div class="industry-card">
 
             <div class="industry-icon">
@@ -248,9 +318,14 @@
 </section>
 
 <!-- CTA SECTION -->
+
 <section class="cta-section">
+
     <div class="cta-box">
-        <h2>Siap Memulai Kemitraan dengan Kami?</h2>
+
+        <h2>
+            Siap Memulai Kemitraan dengan Kami?
+        </h2>
 
         <p>
             Hubungi kami sekarang untuk konsultasi gratis dan penawaran terbaik.
@@ -258,21 +333,22 @@
 
         <div class="cta-buttons">
 
-            <!-- BUTTON HUBUNGI -->
             <a href="{{ url('/hubungi-kami') }}" class="btn-primary">
                 Hubungi Kami →
             </a>
 
-            <!-- BUTTON PRODUK -->
             <a href="{{ url('/katalog') }}" class="btn-secondary">
                 Lihat Produk
             </a>
 
         </div>
+
     </div>
+
 </section>
 
 <!-- SCRIPT FILTER -->
+
 <script>
 
 function filterProduk(kategori) {
@@ -303,7 +379,7 @@ function filterProduk(kategori) {
 
 }
 
-<script>
+// ACTIVE BUTTON
 
 const buttons = document.querySelectorAll('.filter button');
 
@@ -322,8 +398,6 @@ buttons.forEach(button => {
     });
 
 });
-
-</script>
 
 </script>
 

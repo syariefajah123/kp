@@ -60,26 +60,17 @@
 
         <!-- LOGO -->
         <a href="/" class="logo">
-
             <img src="{{ asset('images/logo.png') }}" alt="Luck Packaging">
-
         </a>
 
-        <!-- HAMBURGER -->
-        <div class="menu-toggle" id="menu-toggle">
-
-            <i class="fa-solid fa-bars"></i>
-
-        </div>
-
         <!-- MENU -->
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
 
             <li>
                 <a href="/">Beranda</a>
             </li>
 
-            <!-- DROPDOWN -->
+            <!-- SOLUSI -->
             <li class="dropdown" id="SolusiDropdown">
 
                 <a href="#" id="solusiToggle">
@@ -105,53 +96,153 @@
 
             </li>
 
-    <li class="dropdown" id="produkDropdown">
+            <!-- PRODUK -->
+            <li class="dropdown" id="produkDropdown">
 
-    <a href="#" id="produkToggle">
-        Produk
-        <i class="fa-solid fa-chevron-down"></i>
-    </a>
+                <a href="#" id="produkToggle">
+                    Produk
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
 
-    <ul class="dropdown-menu">
+                <ul class="dropdown-menu">
+
+                    <li>
+                        <a href="/katalog">
+                            Katalog Produk
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/packaging">
+                            Packaging Industri
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="/tentang-kami">
+                    Tentang Kami
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- RIGHT -->
+        <div class="nav-right">
+
+            <div class="lang-switch">
+                <i class="fa-solid fa-globe"></i>
+
+                <select>
+                    <option>ID</option>
+                    <option>EN</option>
+                </select>
+            </div>
+
+            <a href="/hubungi-kami" class="contact-btn">
+                Hubungi Kami
+            </a>
+
+            <!-- HAMBURGER -->
+<div class="menu-toggle" id="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+    <!-- HEADER -->
+    <div class="mobile-top">
+
+        <img src="{{ asset('images/logo.png') }}" alt="Logo">
+
+        <div class="close-menu" id="closeMenu">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+
+    <!-- MENU -->
+    <ul class="mobile-links">
+
+        <li><a href="/" class="lang-text" data-id="Beranda" data-en="Home">Beranda</a></li>
+
+        <li class="mobile-title lang-text"
+            data-id="Solusi"
+            data-en="Solutions">
+            Solusi
+        </li>
 
         <li>
-            <a href="/katalog">
-                Katalog Produk
+            <a href="/corporate"
+               class="sub-link lang-text"
+               data-id="Layanan Korporat (Industrial)"
+               data-en="Corporate Services (Industrial)">
+               Layanan Korporat (Industrial)
+            </a>
+        </li>
+
+        <li class="mobile-title lang-text"
+            data-id="Produk"
+            data-en="Products">
+            Produk
+        </li>
+
+        <li>
+            <a href="/katalog"
+               class="sub-link lang-text"
+               data-id="Katalog Produk"
+               data-en="Product Catalog">
+               Katalog Produk
             </a>
         </li>
 
         <li>
-            <a href="/packaging">
-                Packaging Industri
+            <a href="/packaging"
+               class="sub-link lang-text"
+               data-id="Packaging Industri"
+               data-en="Industrial Packaging">
+               Packaging Industri
+            </a>
+        </li>
+
+        <li>
+            <a href="/tentang-kami"
+               class="lang-text"
+               data-id="Tentang Kami"
+               data-en="About Us">
+               Tentang Kami
             </a>
         </li>
 
     </ul>
 
-</li>
+    <!-- BOTTOM -->
+    <div class="mobile-bottom">
 
-            <li>
-                <a href="/tentang-kami"
-class="{{ Request::is('tentang-kami') ? 'active-nav' : '' }}">
-    Tentang Kami
-</a>
-            </li>
+        <div class="mobile-lang">
 
-    
+            <i class="fa-solid fa-globe"></i>
 
-        </ul>
+            <span id="langSwitch">
+                English
+            </span>
 
-        <!-- RIGHT MENU -->
-<div class="nav-right">
+        </div>
 
+        <a href="/hubungi-kami" class="mobile-contact lang-text"
+           data-id="Hubungi Kami"
+           data-en="Contact Us">
+            Hubungi Kami
+        </a>
 
-    <a href="/hubungi-kami" class="contact-btn">
-        Hubungi Kami
-    </a>
+    </div>
 
 </div>
-
-
+        </div>
 
     </div>
 
@@ -301,24 +392,79 @@ AOS.init({
 <!-- SCRIPT -->
 <!-- ================================= -->
 
-
 <script>
-
-
 
 // =================================
 // MOBILE MENU
 // =================================
 
 const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('closeMenu');
 
-const navLinks = document.querySelector('.nav-links');
+if(menuToggle && mobileMenu){
 
-menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', () => {
 
-    navLinks.classList.toggle('active');
+        mobileMenu.classList.add('active');
 
-});
+    });
+
+}
+
+if(closeMenu && mobileMenu){
+
+    closeMenu.addEventListener('click', () => {
+
+        mobileMenu.classList.remove('active');
+
+    });
+
+}
+
+// =================================
+// TRANSLATE ID / EN
+// =================================
+
+const langSwitch = document.getElementById('langSwitch');
+
+let currentLang = 'id';
+
+if(langSwitch){
+
+    langSwitch.addEventListener('click', () => {
+
+        const texts = document.querySelectorAll('.lang-text');
+
+        if(currentLang === 'id'){
+
+            texts.forEach(text => {
+
+                text.innerHTML = text.dataset.en;
+
+            });
+
+            langSwitch.innerHTML = 'Indonesia';
+
+            currentLang = 'en';
+
+        }else{
+
+            texts.forEach(text => {
+
+                text.innerHTML = text.dataset.id;
+
+            });
+
+            langSwitch.innerHTML = 'English';
+
+            currentLang = 'id';
+
+        }
+
+    });
+
+}
 
 // =================================
 // NAVBAR SCROLL
@@ -450,18 +596,23 @@ document.addEventListener('mousemove', (e) => {
 
 });
 
+// =================================
 // DROPDOWN PRODUK
+// =================================
+
 const produkToggle = document.getElementById('produkToggle');
 const produkDropdown = document.getElementById('produkDropdown');
 
+// =================================
 // DROPDOWN SOLUSI
+// =================================
+
 const solusiToggle = document.getElementById('solusiToggle');
 const solusiDropdown = document.getElementById('SolusiDropdown');
 
-
-// ==========================
+// =================================
 // PRODUK
-// ==========================
+// =================================
 
 if(produkToggle && produkDropdown){
 
@@ -470,20 +621,17 @@ if(produkToggle && produkDropdown){
         e.preventDefault();
         e.stopPropagation();
 
-        // tutup solusi
         solusiDropdown?.classList.remove('active');
 
-        // toggle produk
         produkDropdown.classList.toggle('active');
 
     });
 
 }
 
-
-// ==========================
+// =================================
 // SOLUSI
-// ==========================
+// =================================
 
 if(solusiToggle && solusiDropdown){
 
@@ -492,20 +640,17 @@ if(solusiToggle && solusiDropdown){
         e.preventDefault();
         e.stopPropagation();
 
-        // tutup produk
         produkDropdown?.classList.remove('active');
 
-        // toggle solusi
         solusiDropdown.classList.toggle('active');
 
     });
 
 }
 
-
-// ==========================
-// KLIK LUAR = TUTUP SEMUA
-// ==========================
+// =================================
+// KLIK LUAR
+// =================================
 
 document.addEventListener('click', () => {
 
@@ -514,6 +659,7 @@ document.addEventListener('click', () => {
     solusiDropdown?.classList.remove('active');
 
 });
+
 </script>
 
 </body>

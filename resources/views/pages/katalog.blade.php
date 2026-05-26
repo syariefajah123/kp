@@ -67,12 +67,39 @@
     <!-- GRID -->
     <div class="grid" id="produkList">
 
+        @foreach($products as $product)
+
+<div class="card {{ str_replace(',', ' ', strtolower($product->kategori)) }}">
+
+    <img src="{{ asset('storage/' . $product->gambar) }}"
+         alt="{{ $product->nama }}">
+
+    <h3>{{ $product->nama }}</h3>
+
+    <p>
+        {{ $product->deskripsi }}
+    </p>
+
+    <div class="tags">
+
+    @foreach(explode(',', $product->kategori) as $tag)
+
+        <span>{{ trim($tag) }}</span>
+
+    @endforeach
+
+</div>
+
+</div>
+
+@endforeach
+
         <!-- CARD -->
         <div class="card cup">
 
             <img src="/images/cup.jpeg" alt="Paper Cup">
 
-            <h3>Gelas Plastik atau Gelas Kertas</h3>
+            <h3>Paper Cup</h3>
 
             <p>
                 Gelas kertas berkualitas tinggi untuk minuman panas dan dingin.
@@ -82,7 +109,7 @@
 
                 <span>Panas & Dingin</span>
                 <span>Food Grade</span>
-                <span>Custom</span>
+                <span>Dapat Dikustomisa</span>
 
             </div>
 
@@ -108,7 +135,7 @@
             </div>
 
         </div>
-
+        
         <!-- CARD -->
         <div class="card container">
 

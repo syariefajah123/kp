@@ -116,35 +116,58 @@ class="contact-card">
                 Isi formulir di bawah ini dan kami akan segera menghubungi Anda.
             </p>
 
-            <form action="{{ route('contact.send') }}" method="POST">
+           <form action="{{ route('contact.send') }}" method="POST">
 
     @csrf
+
+    @if(session('success'))
+
+        <div class="success-alert">
+
+            {{ session('success') }}
+
+        </div>
+
+    @endif
 
     <div class="form-grid">
 
         <div class="form-group">
-            <input type="text" name="nama" placeholder="Nama Lengkap *" required>
+            <input type="text"
+                   name="nama"
+                   placeholder="Nama Lengkap *"
+                   required>
         </div>
 
         <div class="form-group">
-            <input type="email" name="email" placeholder="Alamat Email *" required>
+            <input type="email"
+                   name="email"
+                   placeholder="Alamat Email *"
+                   required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="telepon" placeholder="Nomor Telepon">
+            <input type="text"
+                   name="whatsapp"
+                   placeholder="Nomor WhatsApp *"
+                   required>
         </div>
 
         <div class="form-group">
-            <input type="text" name="perusahaan" placeholder="Nama Perusahaan">
+            <input type="text"
+                   name="produk"
+                   placeholder="Produk yang diminati">
         </div>
 
     </div>
 
     <div class="form-group">
-        <textarea 
+
+        <textarea
             name="pesan"
             placeholder="Jelaskan kebutuhan packaging Anda"
             required></textarea>
+
     </div>
 
     <button type="submit" class="send-btn">

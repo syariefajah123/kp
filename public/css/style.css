@@ -5171,3 +5171,12 @@ RESPONSIVE NAVBAR
 .mobile-links li{
     list-style:none;
 }
+
+.success-alert{
+    background: #d1fae5;
+    color: #065f46;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}

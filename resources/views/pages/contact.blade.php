@@ -149,7 +149,7 @@ class="contact-card">
         <div class="form-group">
             <input type="text"
                    name="whatsapp"
-                   placeholder="Nomor WhatsApp *"
+                   placeholder="WhatsApp (awali dengan 62)*"
                    required>
         </div>
 
